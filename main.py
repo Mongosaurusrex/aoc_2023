@@ -1,11 +1,15 @@
 from utils.puzzle_repository import PuzzleRepository
 from calendar.one.solutions import DayOne
+from calendar.two.solutions import DayTwo
 
 
 def setup_solutions() -> dict:
     puzzle_repository = PuzzleRepository()
 
-    return {"day_one": DayOne(puzzle_repository).solution}
+    return {
+        "day_one": DayOne(puzzle_repository).solution,
+        "day_two": DayTwo(puzzle_repository).solution,
+    }
 
 
 if __name__ == "__main__":
@@ -14,4 +18,3 @@ if __name__ == "__main__":
     for key in solutions.keys():
         thunk = solutions[key]
         thunk()
-
