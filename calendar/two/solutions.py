@@ -1,10 +1,10 @@
 from functools import reduce
-import sys
-import os
 
 
 class DayTwo:
     def __init__(self, puzzle_repository):
+        import os
+
         self.input = puzzle_repository.get_and_save_puzzle_from_day(
             os.path.abspath("calendar/two/input.txt"), 2
         )

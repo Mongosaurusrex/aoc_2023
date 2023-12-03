@@ -11,7 +11,7 @@ class PuzzleRepository:
     def get_and_save_puzzle_from_day(self, to_path: str, day: int) -> str:
         if os.path.exists(to_path):
             with open(to_path, "r") as text_file:
-                return text_file.readlines()
+                return text_file.read().splitlines()
 
         puzzle_input = get_data(
             session=os.getenv("AOC_SESSION", ""), year=2023, day=day
