@@ -3,6 +3,7 @@ from calendar.one.solutions import DayOne
 from calendar.two.solutions import DayTwo
 from calendar.three.solutions import DayThree
 from calendar.four.solutions import DayFour
+from calendar.five.solutions import DayFive
 
 
 def setup_solutions() -> dict:
@@ -13,6 +14,7 @@ def setup_solutions() -> dict:
         "day_two": DayTwo(puzzle_repository).solution,
         "day_three": DayThree(puzzle_repository).solution,
         "day_four": DayFour(puzzle_repository).solution,
+        "day_five": DayFive(puzzle_repository).solution,
     }
 
 

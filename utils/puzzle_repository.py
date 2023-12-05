@@ -21,3 +21,17 @@ class PuzzleRepository:
             text_file.write(puzzle_input)
 
         return puzzle_input
+
+    def get_and_save_puzzle_from_day_with_raw_data(self, to_path: str, day: int) -> str:
+        if os.path.exists(to_path):
+            with open(to_path, "r") as text_file:
+                return text_file.read()
+
+        puzzle_input = get_data(
+            session=os.getenv("AOC_SESSION", ""), year=2023, day=day
+        )
+
+        with open(to_path, "w") as text_file:
+            text_file.write(puzzle_input)
+
+        return puzzle_input
